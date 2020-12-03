@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Unable to retrieve the specific info from weather services')
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees out. There is a " + body.current.precip + "% chance of rain." 
+            callback(undefined, body.current.weather_descriptions[0] + ". It is currently " + body.current.temperature + " degrees out. There is a " + body.current.precip + "% chance of rain." + " The real feel is " +body.current.feelslike + " degrees Celsius."
             )
         }
     }
